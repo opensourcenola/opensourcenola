@@ -1,7 +1,7 @@
 opensourcenola
 ==============
 
-The Open Source NOLA Website
+The [Open Source NOLA Website](http://opensourcenola.org/)
 
 
 Created using the yeoman webapp generator.
