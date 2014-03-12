@@ -12,10 +12,11 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-
+          
         <!-- endbower -->
         <!-- endbuild -->
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic,300,300italic' rel='stylesheet' type='text/css'>
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -23,137 +24,164 @@
 
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-    <div class="container">
-    <div class="row">
-      <img src="images/open_source_nola_logo_no_graph.jpg"/>
-    </div>
-    <div class="row">
-        <h1>The New Orleans Open Source Hackathon</h1>
-
-        <h3>When</h3>
-        <h4>Friday, May 9, 2014 at 7:00 PM - Saturday, May 10, 2014 at 7:00 (CST)</h4>
-
-        <h3>Where</h3>
-        <h4>TBD</h4>
-    </div>
-
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-12">
-            <h2 class="featurette-heading">Featured Open Source Projects</h2>
-
-            <ul class="list-unstyled">
-                <li><h3><a href="http://www.discourse.org/">Discourse</a></h3></li>
-            </ul>
-
-            <br/>
-            <h4>Open Source Project Owners!</h4>
-
-            <p>We want participants to contribute to your projects. The only things we ask is that the project is hosted
-                on Github and
-                that someone will be available during the hackathon to accept pull requests and interact with the
-                participants.
-                Send an email to <a href="mailto:bryan@opensourcenola.org" target="_top">bryan@opensourcenola.org</a> or
-                tweet <a href="http://twitter.com/opensourcenola">@opensourcenola</a>
-                if you want your open source project to be included in the hackathon for users to contribute to.
-            </p>
-
-            <h4>Participants! Spread the word!</h4>
-
-            <p>Let your favorite open source projects know so that they can be
-                included in the hackathon</p>
+    <section class="slide slide--primary" id="intro">
+      <div class="container container--centered">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="logo logo--title">Open Source NOLA</h1>
+            <h2 class="logo logo--description">The New Orleans Open Source Hackathon</h2>
+          </div>
         </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-12">
-            <h2 class="featurette-heading">Rules</h2>
-            <ul>
-                <li>Teams of up to 4 people</li>
-                <li>Anyone on the team can contribute to any open source project(s) listed above</li>
-                <li>Scoring is points based</li>
-                <li>1 point for submitting a patch or pull request that fixes a bug</li>
-                <li>2 points for submitting a patch or pull request that implements a feature</li>
-                <li>4 points creating a new feature, having that accepted by the project and for submitting a patch or pull request implements that feature
-                </li>
-                <li>Whoever scores the most points at the end of the hackathon wins</li>
-                <li>Prizes will be given to the 1st, 2nd, and 3rd place teams</li>
-                <li>Individual prizes will be given to the 1st, 2nd, and 3rd place individuals</li>
-            </ul>
-        </div>
-    </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading">Registration</h2>
-            <h4><a target="_blank" href="http://www.eventbrite.com/e/new-orleans-open-source-hackathon-tickets-10611321749">Register at Eventbrite</a></h4>
-        </div>
-      </div>
-
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading">Prizes</h2>
-            <p>TBD</p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading">Sponsors</h2>
-            <a target="_blank" href="http://nclud.com/"><img src="images/bronze_nclud.jpg"/></a>
-
-            <br/><br/>
-            <h4>Click <a href="/sponsors">here</a> to find out details on how to become a sponsor.</h4>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading">Contact</h2>
-          <div class="row">
-            <div class="col-lg-4"> 
-                <p><i class="fa fa-envelope"></i>   <a href="mailto:bryan@opensourcenola.org" target="_top">bryan@opensourcenola.org</a></p>
-            </div>
-            <div class="col-lg-3">
-                <p><i class="fa fa-twitter"></i> <a href="http://twitter.com/opensourcenola">@opensourcenola</a></p>
-            </div>
-            <div class="col-lg-4">
-                <p><i class="fa fa-github"></i>  <a href="http://github.com/opensourcenola">opensourcenola</a></p>
-            </div>
+        <div class="row">
+          <div class="col-md-8">
+            <p class="lead">24 hours of developers and designers jammin' hard on existing open source projects in an effort to push the web forward just a wee bit more. Registration is free and open to the public.</p>
+            <a href="http://www.eventbrite.com/e/new-orleans-open-source-hackathon-tickets-10611321749" target="_blank" class="btn btn-default btn-lg">I'm in.  <i class="fa fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
+    </section>
 
-      <hr class="featurette-divider">
+    <nav class="navbar navbar-inverse" role="navigation" id="navbar">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Open Source Nola</a>
+        </div>
 
-      <!-- /END THE FEATURETTES -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#rules">Rules</a></li>
+            <li><a href="#register">Registration</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
+    <section class="slide" id="projects">
+      <div class="container container--centered">
+        <div class="content content--primary">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="slide-heading slide-heading--index">01</h2>
+              <h2 class="slide-heading">Featured Projects</h2>  
+              <div class="list-group">
+                <a href="http://www.discourse.org/" class="list-group-item">
+                  <h4 class="list-group-item-heading">Discourse</h4>
+                  <p class="list-group-item-text">Looking for a badass forum built on rails in a flash? Look no further than Discourse.</p>
+                </a>
+                <a href="http://www.discourse.org/" class="list-group-item">
+                  <h4 class="list-group-item-heading">Another Sample Project</h4>
+                  <p class="list-group-item-text">Bacon ipsum dolor sit amet drumstick ball tip pancetta corned beef bresaola.</p>
+                </a>
+                <a href="http://www.discourse.org/" class="list-group-item">
+                  <h4 class="list-group-item-heading">Another Sample Project</h4>
+                  <p class="list-group-item-text">Bacon ipsum dolor sit amet drumstick ball tip pancetta corned beef bresaola.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content--secondary">
+          <h4>Open Source Project Owners!</h4>
 
-      <!-- FOOTER -->
-      <footer>
-        <p>&copy; 2014 Open Source NOLA, LLC.</p>
-      </footer>
+          <p>We want participants to contribute to your projects. The only things we ask is that the project is hosted on Github and that someone will be available during the hackathon to accept pull requests and interact with the participants.
+          Send an email to <a href="mailto:bryan@opensourcenola.org" target="_top">bryan@opensourcenola.org</a> or tweet <a href="http://twitter.com/opensourcenola">@opensourcenola</a>if you want your open source project to be included in the hackathon for users to contribute to.</p>
+
+          <h4>Participants! Spread the word!</h4>
+          <p>Let your favorite open source projects know so that they can be included in the hackathon</p>
+        </div> 
+      </div>
+    </section>
+
+    <section class="slide slide--primary" id="rules">
+      <div class="container container--centered">
+        <div class="content content--primary">
+          <h3 class="slide-heading slide-heading--index">02</h3>
+          <h2 class="slide-heading">Rules</h2>
+          <ul>
+            <li>Teams of up to 4 people</li>
+            <li>Anyone on the team can contribute to any open source project(s) listed above</li>
+            <li>Scoring is points based</li>
+            <li>1 point for submitting a patch or pull request that fixes a bug</li>
+            <li>2 points for submitting a patch or pull request that implements a feature</li>
+            <li>4 points creating a new feature, having that accepted by the project and for submitting a patch or pull request implements that feature
+            </li>
+            <li>Whoever scores the most points at the end of the hackathon wins</li>
+            <li>Prizes will be given to the 1st, 2nd, and 3rd place teams</li>
+            <li>Individual prizes will be given to the 1st, 2nd, and 3rd place individuals</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="register">
+      <div class="container container--centered">
+        <div class="content content--primary">
+          <div class="col-md-8">
+            <h3 class="slide-heading slide-heading--index">03</h3>
+            <h2 class="slide-heading">Registration</h2>
+            <p>Registration is free and open to the public. The exact date of the event is from Friday, May 9, 2014 at 7:00 PM to Saturday, May 10, 2014 at 7:00 (CST). Location has yet to be determined. </p><a class="btn btn-primary btn-lg" target="_blank" href="http://www.eventbrite.com/e/new-orleans-open-source-hackathon-tickets-10611321749">Register at Eventbrite</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--primary" id="prizes">
+      <div class="container container--centered">
+        <div class="content content--primary">
+          <div class="col-md-8">
+            <h3 class="slide-heading slide-heading--index">04</h3>
+            <h2 class="slide-heading">Prizes</h2>
+            <p>To be determined...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="sponsors">
+      <div class="container container--centered">
+        <div class="content content--primary">
+          <div class="col-md-8">
+            <h3 class="slide-heading slide-heading--index">05</h3>
+            <h2 class="slide-heading">Sponsors</h2>
+            <p><a target="_blank" href="http://nclud.com/"><img src="images/nclud.png" width="200px" class="sponsor"/></a>
+
+            <a class="alert" href="/sponsors">Click here to find out details on how to become a sponsor.</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide--primary" id="contact">
+      <div class="container container--centered">
+        <div class="content content--primary">
+          <h3 class="slide-heading slide-heading--index">06</h3>
+          <h2 class="slide-heading">Contact</h2>
+          <div class="col-md-12"> 
+            <ul class="list-inline">
+              <li><i class="fa fa-envelope"></i> <a href="mailto:bryan@opensourcenola.org" target="_top">bryan@opensourcenola.org</a> </li>    
+              <li><i class="fa fa-twitter"></i> <a href="http://twitter.com/opensourcenola">@opensourcenola</a></li>
+              <li><i class="fa fa-github"></i>  <a href="http://github.com/opensourcenola">opensourcenola</a></p></li>
+          </div>
+        </div>
+      </div>
+    </section>
 
     </div><!-- /.container -->
 
@@ -175,6 +203,8 @@
         </script>
 
         <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/jquery-waypoints/waypoints.js"></script>
+        <script src="bower_components/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.js"></script>
         <script src="bower_components/sass-bootstrap/js/affix.js"></script>
         <script src="bower_components/sass-bootstrap/js/alert.js"></script>
         <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
