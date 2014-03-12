@@ -308,7 +308,11 @@ module.exports = function (grunt) {
                         'styles/fonts/{,*/}*.*',
                         'bower_components/' + (this.includeCompass ? 'sass-' : '') + 'bootstrap/' + (this.includeCompass ? 'fonts/' : 'dist/fonts/') +'*.*',
                         'bower_components/font-awesome/css/*.*',
-                        'bower_components/font-awesome/fonts/*.*'
+                        'bower_components/font-awesome/fonts/*.*',
+                        'bower_components/jquery/*.*',
+                        'bower_components/jquery-waypoints/*.*',
+                        'bower_components/jquery-waypoints/shortcuts/*.*',
+                        'bower_components/jquery-waypoints/shortcuts/sticky-elements/*.*'
                     ]
                 }]
             },
