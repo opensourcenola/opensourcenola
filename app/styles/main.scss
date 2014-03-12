@@ -56,8 +56,8 @@ h1,h2,h3,h4,h5 {
 // Basic "Slide" Setup
 .slide {
   height: 100%;
-  padding: 2.0em;
   position: relative;
+  z-index: 11; // First level
   .slide-heading {
     font-size: 5.0em;
     font-weight: 900;
@@ -102,7 +102,7 @@ h1,h2,h3,h4,h5 {
       transform: translate(-50%, -50%);
       top: 50%;
       position: absolute;
-      // text-align: center;
+      z-index: 111; // Third level
     }
     .content--primary {}
     .content--secondary {}
@@ -111,6 +111,7 @@ h1,h2,h3,h4,h5 {
 // Mobile tweaks
 @media screen and (max-width: 768px) {
   .slide {
+    padding: 2.0em;
     height: auto; // Disable 100% width
     .slide-heading {
       font-size: 2.0em;
@@ -130,6 +131,12 @@ h1,h2,h3,h4,h5 {
         position: relative;
       }
     }
+    .video--wrapper {
+      display: none;
+    }
+  }
+  .navbar {
+    margin-top: 0 !Important;
   }
 }
 
@@ -140,17 +147,25 @@ h1,h2,h3,h4,h5 {
 // Random hacks because it's 2am
 // Get this shit out of here...
 
+.video--intro {
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+}
+
 // Navbar shit. Temportary location...
 .navbar {
   margin-top: -$navbar-height;
   margin-bottom: $navbar-height;
   border-radius: 0;
   border: 0;
+  z-index: 111; // Third Level
+  position: relative;
   &.stuck {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 9;
     margin-top: 0;
   }
 }
