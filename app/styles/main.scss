@@ -81,15 +81,11 @@ h1,h2,h3,h4,h5 {
       color: #FFF;
     }
     .btn {
-      border: none;
-      color: $brand-primary;
+      border: 3px solid #FFF;
+      color: #FFF;
       font-weight: bold;
-      min-width: 280px;
       text-align: left;
-      i {
-        margin-top: 4px;
-        float: right;
-      }
+      background: transparent;
     }
   }
   .container {
