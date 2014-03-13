@@ -124,6 +124,8 @@ h1,h2,h3,h4,h5 {
   }
 }
 
+/* Page Container
+--------------------*/
 .page {
   background: #f9f9f9;
   .navbar {
@@ -138,7 +140,7 @@ h1,h2,h3,h4,h5 {
     &.container--centered {
       left: 0;
       @include translate(0, 0);
-      padding: 4.0em 0 6.0em 0;
+      padding: 6.0em 0 6.0em 0;
       position: relative;
       top: 0;
     }
@@ -234,6 +236,13 @@ footer {
     }
     .video--wrapper {
       display: none;
+    }
+  }
+  .page {
+    .container {
+      &.container--centered {
+        padding: 2.0em;
+      }
     }
   }
   .navbar {
