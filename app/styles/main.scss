@@ -195,7 +195,7 @@ footer {
   .video--intro {
     top: 0;
     left: 0;
-    opacity: 0.5;
+    @include opacity(.2);
     -webkit-filter: grayscale(100%);
   }
 }
