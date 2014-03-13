@@ -5,34 +5,37 @@ $brand-primary: #17a18c;
 
 /* Core
 --------------------*/
-// I guess we'll leave this here...
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-// Global Box Sizing Ya Heard?
 *, 
 *:before, 
 *:after {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
+   @include box-sizing(border-box);
 }
 html,
 body {
-  height: 100%;
-  position: relative;
   font-size: 18px;
+  height: 100%;
   line-height: 1.8;
+  position: relative;
 }
 h1,h2,h3,h4,h5 {
   font-family: "Roboto", Sans-Serif;
   font-weight: 600;
 }
 
-/* Logo Module
+/* Browse Happy
+--------------------*/
+.browsehappy { 
+  background: $brand-danger;
+  color: #FFF;
+  margin: 0;
+  padding: 1.0em;
+  a {
+    color: #FFF;
+    font-weight: bold;
+  }
+}
+
+/* Logo
 --------------------*/
 .logo {
   font-family: "Roboto", Sans-Serif;
@@ -52,9 +55,8 @@ h1,h2,h3,h4,h5 {
   }
 }
 
-/* Slide Module
+/* Slide
 --------------------*/
-// Basic "Slide" Setup
 .slide {
   height: 100%;
   position: relative;
@@ -92,40 +94,85 @@ h1,h2,h3,h4,h5 {
   .container {
     &.container--centered {
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      top: 50%;
+      @include translate(-50%, -50%);
       position: absolute;
+      top: 50%;
       z-index: 111; // Third level
     }
-    .content--primary {}
-    .content--secondary {}
   }
 }
-// Mobile tweaks
+
+/* Video
+--------------------*/
+.video {
+  .video--intro {
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100%);
+  }
+}
+
+
+/* Image
+--------------------*/
+.img {
+  &.img--sponsor {
+    margin: 20px 0;
+    opacity: .8;
+    &:hover {
+      opacity: 1.0;
+    }
+  }
+}
+
+/* Alert
+--------------------*/
+.alert {
+  &.alert--footnote {
+    border-left: 3px solid;
+    border-radius: 0;
+    display: block;
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+}
+
+/* Navbar
+--------------------*/
+.navbar {
+  border: 0;
+  border-radius: 0;
+  margin-top: -$navbar-height;
+  margin-bottom: $navbar-height;
+  position: relative;
+  z-index: 111; // Third Level
+  &.stuck {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* Mobile & Tablet
+--------------------*/
 @media screen and (max-width: 768px) {
   .slide {
-    padding: 2.0em;
+    padding: 2.0em; // Add some padding
     height: auto; // Disable 100% width
     .slide-heading {
-      font-size: 2.0em;
+      font-size: 2.0em; // Shrink font size
       &.slide-heading--index {
-        font-size: 1.0em;
+        font-size: 1.0em; // Shrink font size
       }
     }
     .container {
       &.container--centered {
-        left: 0; // Disable vertical align
-        -webkit-transform: translate(0); // Disable vertical align
-        -moz-transform: translate(0); // Disable vertical align
-        -ms-transform: translate(0); // Disable vertical align
-        -o-transform: translate(0); // Disable vertical align
-        transform: translate(0); // Disable vertical align
-        top: 0; // Disable vertical align
+        left: 0;
+        @include translate(0,0);
         position: relative;
+        top: 0;
       }
     }
     .video--wrapper {
@@ -134,71 +181,5 @@ h1,h2,h3,h4,h5 {
   }
   .navbar {
     margin-top: 0 !Important;
-  }
-}
-
-
-/* Shameful
---------------------*/
-// Some stuff leftover from Yeoman.
-// Random hacks because it's 2am
-// Get this shit out of here...
-
-.video--intro {
-  top: 0;
-  left: 0;
-  opacity: 0.5;
-  -webkit-filter: grayscale(100%);
-}
-
-// Navbar shit. Temportary location...
-.navbar {
-  margin-top: -$navbar-height;
-  margin-bottom: $navbar-height;
-  border-radius: 0;
-  border: 0;
-  z-index: 111; // Third Level
-  position: relative;
-  &.stuck {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    margin-top: 0;
-  }
-}
-// This is a sponsor logo. Fix this later...
-img.sponsor {
-  margin: 20px 0;
-  opacity: .8;
-  &:hover {
-    opacity: 1.0;
-  }
-}
-// This is the alert on the sponsors section. Fix this later too...
-a.alert {
-  border-left: 3px solid;
-  border-radius: 0;
-  display: block;
-  padding: 0 20px;
-  margin-top: 40px;
-}
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 100%;
-  }
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
   }
 }
