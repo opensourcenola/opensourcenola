@@ -146,6 +146,19 @@ h1,h2,h3,h4,h5 {
     }
   }
 }
+/* Home Button
+--------------------*/
+.home {
+  font-size: 2em;
+  @include opacity(.5);
+  left: 0;
+  margin: 1em;
+  position: absolute;
+  top: 0;
+  &:hover {
+    @include opacity(1);
+  }
+}
 
 /* Footer
 --------------------*/
