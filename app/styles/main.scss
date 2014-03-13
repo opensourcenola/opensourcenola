@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5 {
   &.logo--title {
     font-size: 4em;
     font-weight: 900;
-    
+
   }
   &.logo--description {
     border-left: 3px solid;
@@ -61,22 +61,6 @@ h1,h2,h3,h4,h5 {
   height: 100%;
   position: relative;
   z-index: 11; // First level
-  .slide-heading {
-    font-size: 5.0em;
-    font-weight: 900;
-    margin-top: 0;
-    &.slide-heading--index {
-      font-size: 4.0em;
-      font-weight: 400;
-      margin: 0;
-      opacity: .5;
-      &:after {
-        content: ' /';
-        font-weight: 100;
-        opacity: .3;
-      }
-    }
-  }
   &.slide--primary {
     background: $brand-primary;
     color: #FFF;
@@ -97,6 +81,37 @@ h1,h2,h3,h4,h5 {
       border: 0;
       &:hover {
         @include opacity(.8);
+        text-decoration: none;
+      }
+    }
+  }
+  .slide-heading {
+    font-size: 5.0em;
+    font-weight: 900;
+    margin-top: 0;
+    &.slide-heading--index {
+      font-size: 4.0em;
+      font-weight: 400;
+      margin: 0;
+      opacity: .5;
+      &:after {
+        content: ' /';
+        font-weight: 100;
+        opacity: .3;
+      }
+    }
+  }
+  .next-slide-arrow{
+    bottom: 0;
+    left: 0;
+    margin-bottom: 15px;
+    position: absolute;
+    a {
+      background: #EEE;
+      color: #666 !important;
+      padding: 20px 30px 20px 30px;
+      &:hover {
+        background: #E6E6E6;
         text-decoration: none;
       }
     }
@@ -248,6 +263,9 @@ footer {
       }
     }
     .video--wrapper {
+      display: none;
+    }
+    .next-slide-arrow{
       display: none;
     }
   }
