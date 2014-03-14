@@ -5,8 +5,8 @@ $brand-primary: #17a18c;
 
 /* Core
 --------------------*/
-*, 
-*:before, 
+*,
+*:before,
 *:after {
    @include box-sizing(border-box);
 }
@@ -24,7 +24,7 @@ h1,h2,h3,h4,h5 {
 
 /* Browse Happy
 --------------------*/
-.browsehappy { 
+.browsehappy {
   background: $brand-danger;
   color: #FFF;
   margin: 0;
@@ -101,6 +101,11 @@ h1,h2,h3,h4,h5 {
       }
     }
   }
+  .sponsor-level-heading {
+    font-size: 3.0em;
+    font-weight: 400;
+    margin-top: 20px;
+  }
   .next-slide-arrow{
     bottom: 0;
     left: 0;
@@ -118,7 +123,7 @@ h1,h2,h3,h4,h5 {
   }
 }
 
-/* Container 
+/* Container
 --------------------*/
 .container {
   &.container--page {
